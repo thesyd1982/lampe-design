@@ -1,0 +1,24 @@
+$header-bgc:#DDDBD9;
+.header {
+  width: 100%;
+  // background-color: #DDDBD9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+  // border:1px solid red;
+  .logo {
+    // grid-area: logo;
+  }
+  .menu {
+    // grid-area: menu;
+  }
+  .hero {
+    // grid-area: hero;
+  }
+  .navbar{
+    // grid-area: navbar;
+  
+  }
+
+}

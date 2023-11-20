@@ -1,0 +1,41 @@
+
+.tile{
+    display: flex;
+    //justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+
+    .desc{
+        margin-inline: 2rem;
+        .title2{
+            text-transform: capitalize;
+            font-size: 4rem;
+            line-height: 1.5em;
+            color: #aaa;
+        }
+        .brand{
+            font-size: 1.2rem;
+            line-height: 1.5em;
+            display: inline-block;
+            text-transform: uppercase;
+            color:white;
+            background-color: #005500;
+            padding-inline: 1rem;
+            margin-block-end: 1.2rem;
+
+         }
+        .normal{
+            font-size: 1.2rem;
+            max-width: 60ch;
+            line-height: 1.5em;
+            padding-block: 0.4rem;
+
+
+        }
+    }
+
+    img{
+        display: inline-block;
+        margin-block: 15rem;
+    }
+}

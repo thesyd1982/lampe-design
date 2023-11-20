@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+$root-bgc: #000000;
+:root {
+  font-family: Oswald,'Open Sans',sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $root-bgc;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+
+a {
+
+  text-decoration: none;
+}
+
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Oswald,sans-serif;
+  }
+
+
+}
+
+*,*::after,*::before{
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  outline:none;
+}
+
+
+ul{list-style: none;padding: 0;margin: 0;}
+
+a{
+  text-decoration: none;
+}

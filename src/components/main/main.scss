@@ -1,0 +1,81 @@
+$clip-h : 5vw ;
+$section-cp1 : polygon(0% 0%,50% $clip-h  , 100% 0, 100% calc( 100% - $clip-h ) , 50% 100% ,0% calc( 100% - $clip-h ) );
+$home-cp: polygon(0% 0%,100% 0, 100% calc( 100% - $clip-h ) , 50% 100% ,0% calc( 100% - $clip-h ) );
+$cp-right: polygon(0% 0%, calc( 100% - $clip-h ) 0, 100% 100% , 0% 100% );
+$cp-left:polygon($clip-h 0%, 100% 0, 100% 100% , 0% 100% );
+$cp-top-bottom:polygon(0% $clip-h, 100% 0, 100% calc( 100% - $clip-h ) , 0% 100% );
+
+$section-cp : $cp-top-bottom;
+// polygon(0% 0%, calc( 100% - $clip-h ) 0, 100% 100% , 0% calc( 100% - $clip-h ) );
+
+
+
+
+
+.main{
+    min-height: calc(100vh - 4rem);
+     background-color: #000000;
+//     background-image: url("wood.jpg");
+// background-position: center;
+// background-repeat: no-repeat;
+// background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+       width: 80%;
+
+
+       .section{
+
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        clip-path: $section-cp;
+        margin-block-end: calc( 0% - $clip-h);
+
+
+        &--home{
+            background-color: #000;
+            color: #aaaaaa;
+            clip-path: none;
+            border: 0.025px solid lighten(#6f867f,15);
+            border-radius:3px;
+            img:{
+                width:20%;
+            }
+        }
+
+        &--product{
+            background-color:lighten(#6f867f,15);
+            color : #fff;
+
+        }
+
+        &--services{
+            background-color:#fff ;
+            color : #6f867f;
+        }
+
+        &--about{
+          background-color:lighten(#ceb9ab,20);
+          //#bf5d10;
+          color: #1f0a17;
+
+
+        }
+        &--contact{
+            background-color: lighten(#c4d4cb,10);
+            //#e4d1be;
+            color : #fff;
+            clip-path:none;
+            margin-block-end: 0;
+        }
+
+
+
+       }
+
+    }
+}

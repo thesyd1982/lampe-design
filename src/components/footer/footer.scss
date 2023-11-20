@@ -1,0 +1,106 @@
+.footer{
+    margin:0 auto;
+    width: 100%;
+    background-color: #1d1d1d;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+
+    &__top{
+        width: 100%;
+        background-color: #6f867f;
+        height: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .socials{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            .social{
+                width: 15%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .icon{
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    width:  3rem;
+                    height: 3rem;
+                    font-size: 1.4rem;
+
+                    &:hover{
+                        // color:#ce7c2d;
+                        border:#fff 1px solid;
+                        font-size: 1.3rem;
+                        border-radius:0.1rem;
+                        padding: 0;
+                    }
+                }
+            }
+        .description{
+            font-size: 1.2rem;
+        }
+    }
+    }
+    &__body{
+        width: 80%;
+        margin:0 auto;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns:  repeat(1fr) ;
+        grid-template-areas:
+         "col1 col1 col2 col3 col4"
+         "col1 col1 col2 col3 col4"
+         "col1 col1 col2 col3 col4";
+
+
+        .col{
+
+            padding-block:1rem;
+            &--header{
+                font-size: 1.4rem;
+                border-bottom: 1px solid #242400;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            &--col1{
+                grid-area: col1;
+            }
+            &--col2{
+
+                grid-area: col2;
+            }
+            &--col3{
+                grid-area: col3;
+
+
+            }
+            &--col4{
+                grid-area: col4;
+
+                .location , .phone, .mail{
+                    display: flex;
+                    align-items: center;
+                    padding-left:0.001rem;
+                }
+            }
+        }
+    }
+    &__footer{
+        width: 100%;
+        .copy-right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            font-size: 1.2rem;
+            background-color: #222422;
+        }
+    }
+}
