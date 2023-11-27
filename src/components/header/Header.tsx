@@ -1,18 +1,30 @@
-import React from 'react'
-import './header.scss'
+import { Hero, Navbar, Section, Carousel } from '../../components/';
+import { SlideProps } from '../../types/commonTypes';
+import './header.scss';
 
-import Logo from '../logo/Logo'
-import Menu from '../menu/Menu'
-import Hero from '../hero/Hero'
-import Navbar from '../navbar/Navbar'
-
-function Header() {
-  return (
-    <div className='header'>
-        <Navbar/>
-        <Hero></Hero>
-    </div>
-  )
+type link = {
+    id: string,
+    text: string,
+    href?: string
 }
+interface HeaderProps {
+    links: link[],
+    slides?: SlideProps[]
+}
+
+function Header(props: HeaderProps) {
+    const { links, slides } = props
+
+    return (
+        <Section sectionId='header'>
+
+            <div className='header'>
+                <Navbar links={links} />
+                {!slides && <Hero />}
+                {slides && <Carousel slides={slides} />}
+            </div>
+        </Section>
+    )
+    }
 
 export default Header

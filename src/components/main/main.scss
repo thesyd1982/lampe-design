@@ -24,10 +24,8 @@ $section-cp : $cp-top-bottom;
     align-items: center;
     .container{
        width: 80%;
-
-
        .section{
-
+           scroll-snap-align: end   ;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -35,12 +33,13 @@ $section-cp : $cp-top-bottom;
         clip-path: $section-cp;
         margin-block-end: calc( 0% - $clip-h);
 
-
         &--home{
+
+           scroll-snap-align:center;
             background-color: #000;
             color: #aaaaaa;
             clip-path: none;
-            border: 0.025px solid lighten(#6f867f,15);
+           // border-block: 0.025px solid lighten(#6f867f,15);
             border-radius:3px;
             img:{
                 width:20%;
@@ -48,13 +47,13 @@ $section-cp : $cp-top-bottom;
         }
 
         &--product{
-            background-color:lighten(#6f867f,15);
-            color : #fff;
+            background-color:lighten(#fffff0,15);
+            color : #000;
 
         }
 
         &--services{
-            background-color:#fff ;
+             background-color:#000 ;
             color : #6f867f;
         }
 
@@ -66,7 +65,7 @@ $section-cp : $cp-top-bottom;
 
         }
         &--contact{
-            background-color: lighten(#c4d4cb,10);
+            background-color: lighten(#000,0);
             //#e4d1be;
             color : #fff;
             clip-path:none;
