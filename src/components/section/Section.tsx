@@ -1,27 +1,23 @@
-import React from 'react'
+import { useRef } from "react";
+import { useIntersectionObserver } from '../../hooks/'
+import { SectionProps } from "../../types/commonTypes";
 
-export const Section = (props : {}) => {
-    return (
-        <section className="section section--home">
-          <Tile
-            src="woody-back.jpg"
-            alt="woody-back"
-            w="40%"
-            h="auto"
-            direction={false}
-          >
-            <h2 className="title2">Lampe design</h2>
-            <h3 className="brand">Darizeenna</h3>
-            <p className="normal">
-              Nous avons le plaisir de vous presenter le
-              produit phare de nôtre marque la lampe de chevet DARIZEENNA.
-              <br />
-              Ce produit avec son design minimaliste inspiré de
-              l'artisanat local, est créer par un artisant sur la région de
-              constantine, c'est un extrait de savoir faire forger dans un bois noble.
-            </p>
-          </Tile>
-        </section>
 
-    )
+const Section = (props:SectionProps) => {
+  const { children, sectionId } = props
+        const ref = useRef<HTMLDivElement | null>(null)
+        const entry = useIntersectionObserver(ref, {})
+        const isVisible = !!entry?.isIntersecting
+        //console.log(`Render Section ${sectionId}`, { isVisible })
+        return (
+                <section
+                className={`section section--${sectionId} ${isVisible?"active":""}`}
+                ref={ref}
+                id={`${sectionId}`}
+                >
+                {children}
+                </section>
+
+               )
 }
+export default Section
