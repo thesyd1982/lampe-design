@@ -22,4 +22,15 @@ export type Children = JSX.Element[] | JSX.Element | ReactNode | string;
 export interface SectionProps {
           sectionId :string ,
           children:Children,
-};
+}
+
+export interface CardProps{
+
+    title:string,
+    description:string,
+    icon?:string,
+    iconSize?:string,
+    link?:string,
+    image?:string,
+
+}

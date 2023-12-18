@@ -8,6 +8,6 @@ import Footer from "./footer/Footer"
 import Navbar from "./navbar/Navbar"
 import Section from "./section/Section"
 import Carousel from "./carousel/Carousel"
-
-export { Header, Hero, Logo, Main, Menu, Tile, Footer, Navbar, Section,  Carousel}
+import Card from "./card/Card"
+export { Header, Hero, Logo, Main, Menu, Tile, Footer, Navbar, Section,  Carousel, Card}
 

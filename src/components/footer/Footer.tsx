@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedin ,  FaEnvelope } from 'react-icons/fa6';
 import { FaHome, FaPhoneAlt } from "react-icons/fa";
+import { MdDoubleArrow } from "react-icons/md";
 import "./footer.scss"
 import Section from "../section/Section";
 
@@ -41,20 +42,20 @@ function Footer() {
           </section>
         <section className="col col--col3">
           <h3 className="col--header">SERVICES</h3>
-          <p>Lorem ipsum dolor
-            sit amet consectetur
-            adipisicing elit.
-            Ad neque in labore? Odio,
-            ullam repudiandae iure dolor obcaecati
-            ipsa dignissimos!
-          </p>
+          <ul>
+            <li><MdDoubleArrow className="icon"/><Link to='/shipping' className="footer-link">{'Livraison en 48H'}</Link></li>
+            <li><MdDoubleArrow className="icon"/><Link to='/shipping' className="footer-link">{'Vente au praticuliers'}</Link></li>
+            <li><MdDoubleArrow className="icon"/><Link to='/shipping' className="footer-link">{'Vente au professionel'}</Link></li>
+            <li><MdDoubleArrow className="icon"/><Link to='/shipping' className="footer-link">{'Personalisation de produits'}</Link></li>
+          </ul>
           </section>
         <section className="col col--col4">
           <h3 className="col--header">CONTACT</h3>
-         <Link to="/contact" className="location"> <p><FaHome /> New York, NY 10012, US</p></Link>
-          <Link to="mailto:ayad.mohamed.elhadi@gmail.com" className="mail"><p><FaEnvelope/>ayad.mohamed.elhadi@gmail.com</p></Link>
-        <Link to="tel:+213 770 60 60 26" className="phone"><p><FaPhoneAlt/> +213 770 60 60 26</p></Link>
-
+        <ul>
+         <li><Link to="/contact" className="location"><FaHome size={"1rem"} className="icon" />{'New York, NY 10012, US'}</Link></li>
+         <li><Link to="mailto:ayad.mohamed.elhadi@gmail.com"  className="mail"><FaEnvelope size={"1rem"} className="icon"/>{'ayad.mohamed.elhadi@gmail.com'}</Link></li>
+        <li><Link to="tel:+213 770 60 60 26" className="phone"><FaPhoneAlt  size={"1rem"} className="icon"/>{`+213 770 60 60 26`}</Link></li>
+        </ul>
 </section>
       </div>
       <div className="footer__footer"><div className="copy-right">{`Copyright © ${new Date().getFullYear()} all rigths reserved to darizeena.tk`}</div></div>

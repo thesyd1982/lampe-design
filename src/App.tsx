@@ -1,5 +1,5 @@
 import './App.scss';
-import { Home, Services, Contact } from './pages/';
+import { Home, Services, Contact, NotFound } from './pages/';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/services' element={<Services />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='*' element={<NotFound />} />
         </Routes>
     )
 }

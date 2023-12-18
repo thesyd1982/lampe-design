@@ -1,0 +1,86 @@
+$base-font-size: 16px; // Définissez la taille de base pour 1rem
+
+$card-border-color: #aaa;
+$card-border-radius: 0.05rem;
+$card-details-padding: 1rem;
+$card-description-margin-bottom:1rem;
+$card-title-margin-bottom: 1rem;
+$card-margin: 1rem;
+$card-hover-scale: 1.02;
+$card-icon-margin: 4rem;
+$card-title-font-size: 1.25rem;//18px / $base-font-size
+$card-description-font-size: 0.875rem; // 14px / $base-font-size
+$card-description-color: #aaa;
+$card-link-color: #007bff;
+$card-link-hover-text-decoration: underline;
+$card-link-font-weight: bold;
+$card-container-padding:0rem;
+
+$card-icon-responsive-margin:2rem;
+
+.card {
+   *{ user-select:none; }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    border: 0.1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    padding: $card-container-padding;
+    margin: $card-margin;
+    background-color: #111111F0;
+    transition: all .3s ease-in-out ;
+
+    &:hover {
+      transform: scale($card-hover-scale);
+      background-color: #ff800011;
+      border: 1px solid #ff8000;
+    }
+
+    &__image{
+        max-height:222px;
+        img{
+        width:100%;
+        height:100%;
+        object-fit:cover;}
+    }
+    &__icon {
+      margin-bottom: $card-icon-margin;
+      border:0.2px solid #fff;
+      .icon {
+          width: 100%;
+          color: #DDD;
+          //border:1px solid red;
+      }
+      svg {}
+    }
+
+    &__details {
+      flex-grow: 1;
+      padding:$card-details-padding;
+      &__title {
+        font-size: $card-title-font-size;
+        font-weight: bold;
+        margin-bottom: $card-description-margin-bottom;
+      }
+
+      &__link {
+        display: inline-block;
+        color: $card-link-color;
+        text-decoration: none;
+        font-weight: $card-link-font-weight;
+
+        &:hover {
+          text-decoration: $card-link-hover-text-decoration;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:767px) {
+      &__container{
+          &__icon{margin-bottom:$card-icon-responsive-margin;}
+          &__details{
+      }
+  }
+
+  }
+}

@@ -23,7 +23,7 @@
             padding-inline: 1rem;
             margin-block-end: 1.2rem;
 
-         }
+        }
         .normal{
             font-size: 1.2rem;
             max-width: 60ch;
@@ -37,5 +37,33 @@
     img{
         display: inline-block;
         margin-block: 15rem;
+
+    }
+    @media screen and (max-width:600px){
+        width:100%;
+        flex-direction:column;
+        justify-content: space-around;
+        margin-block: 2rem;
+        padding: 1rem;
+        img{
+            width:100%;
+            object-fit:cover;
+            margin: 0;
+        }
+        .desc{
+            width:100%;
+            padding: 0;
+            margin: 0;
+            .title2{
+                font-size:2rem;
+                border:1px solid red;
+            }
+            .normal{
+                font-size: 1rem;
+                max-width: 120ch;
+                line-height: 1.2em;
+                padding: 0;
+            }
+        }
     }
 }

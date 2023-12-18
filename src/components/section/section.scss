@@ -1,4 +1,5 @@
-section:{
-    border:1px solid red;:w
-
+section{
+@media screen and (max-width: 600px) {
+  width:100vw;
+}
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Livraison",
+    "description": "Nous assurons une livraison rapide et fiable de vos produits.",
+    "icon": "MdLocalShipping",
+    "link": "/livraison",
+    "image":"van.jpg"
+  },
+  {
+    "title": "Vente pour les particuliers",
+    "description": "Découvrez nos offres exclusives pour les particuliers.",
+    "icon": "MdPerson",
+    "link": "/vente-particuliers",
+    "image":"packages-delivery.jpg"
+  },
+  {
+    "title": "Vente pour les professionnels",
+    "description": "Des solutions sur mesure pour les entreprises et professionnels.",
+    "icon": "MdBusiness",
+    "link": "/vente-professionnels",
+    "image":"packages-delivery-pro.jpg"
+  },
+  {
+    "title": "Personnalisation du produit",
+    "description": "Donnez une touche personnelle à vos produits avec notre service de personnalisation.",
+    "icon": "MdSettings",
+    "link": "/personnalisation-produit",
+    "image":"custom-demande1.jpg"
+  }
+]

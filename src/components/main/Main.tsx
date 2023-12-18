@@ -1,5 +1,6 @@
 import "./main.scss";
 import { Section } from "../../components/";
+import { ReactNode } from "react";
 
 
 type section = {
@@ -7,11 +8,13 @@ type section = {
     sectionId :string ,
   };
   type MainProps ={
-      sections:section[]
+      sections:section[],
+      children?: ReactNode
+
   }
 
 function Main(props:MainProps) {
-    const {sections} = props
+    const {sections, children} = props
 
 
 
@@ -27,6 +30,7 @@ function Main(props:MainProps) {
                     {section.children}
                     </Section>
                      )}
+                    {children}
             </div>
         </main>
     );

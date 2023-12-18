@@ -39,13 +39,14 @@ function Navbar(props: NavbarProps) {
     document.body.addEventListener('scroll',handleScroll)
     document.getElementById('logo')?.addEventListener('onclick', () => console.log(window.location.href))
     return (
-        <nav className={`navbar navbar--${ sticky ? "small": "large"} ${hide? "hidden" : ""}`} id="navbar">
+        <nav className={`navbar navbar--${ sticky ? "small": "large"} ${displayMenu?"show-menu":"" } ${hide? "hidden" : ""}`}
+        id="navbar">
 
             <div className="navbar__logo" id='logo'>
                 <Logo cls='navbar__logo' />
             </div>
 
-            <ul className={`navbar__links navbar__links--${ sticky ? "small": "large"}`} >
+            <ul className={`navbar__links navbar__links--${ sticky ? "small": "large"}`} onClick={displayMenuHandler} >
 
                 {
                     links.map((link, i) => {
